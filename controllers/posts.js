@@ -37,7 +37,7 @@ export const createPost = async(req,res) => {
     const { userId, userName, userProfile , postedFile, caption } = req.body;
     const newPost = new postData({userId, userName, userProfile, postedFile, caption })
     try {
-        await newPost.save();
+        await newPost.save()
 
         res.status(200).json(newPost);
     } catch (error) {
